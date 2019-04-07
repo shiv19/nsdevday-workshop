@@ -1,6 +1,11 @@
 {
   "main": "main.js",
   "android": {
-    "v8Flags": "--expose_gc"
-  }
+    "v8Flags": "--expose_gc",
+    "markingMode": "none",
+    "supressCallJsExceptions": "true",
+    "handleTimeZoneChanges": true,
+    "maxLogcatObjectSize": 2048
+  },
+  "discardUncaughtJsExceptions": true
 }

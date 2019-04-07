@@ -1,44 +1,49 @@
-<!--
-RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
-Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
-https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
--->
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
-    <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
-        <StackLayout row="0" class="sidedrawer-header">
-            <Label class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
-            <Label class="sidedrawer-header-brand" text="User Name"></Label>
-            <Label class="footnote" text="username@mail.com"></Label>
-        </StackLayout>
-    
-        <ScrollView row="1">
+    <GridLayout tkDrawerContent rows="*" class="sidedrawer sidedrawer-left">
+        <ScrollView row="0">
             <StackLayout class="sidedrawer-content">
-                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/overview')" (tap)="onNavItemTap('/overview')">
                     <Label col="0" text="&#xf015;" class="fa"></Label>
-                    <Label col="1" text="Home" class="p-r-10"></Label>
+                    <Label col="1" text="Overview" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/browse')" (tap)="onNavItemTap('/browse')">
-                    <Label col="0" text="&#xf1ea;" class="fa"></Label>
-                    <Label col="1" text="Browse" class="p-r-10"></Label>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/layouts-refresher')" (tap)="onNavItemTap('/layouts-refresher')">
+                    <Label col="0" text="&#xf00b;" class="fa"></Label>
+                    <Label col="1" text="Layouts Refresher" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/search')" (tap)="onNavItemTap('/search')">
-                    <Label col="0" text="&#xf002;" class="fa"></Label>
-                    <Label col="1" text="Search" class="p-r-10"></Label>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/widgets-refresher')" (tap)="onNavItemTap('/widgets-refresher')">
+                    <Label col="0" text="&#xf3a5;" class="fa"></Label>
+                    <Label col="1" text="Widgets Refresher" class="p-r-10"></Label>
                 </GridLayout>
 
-                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/featured')" (tap)="onNavItemTap('/featured')">
-                    <Label col="0" text="&#xf005;" class="fa"></Label>
-                    <Label col="1" text="Featured" class="p-r-10"></Label>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/scalable-layouts')" (tap)="onNavItemTap('/scalable-layouts')">
+                    <Label col="0" text="&#xf31e;" class="fa"></Label>
+                    <Label col="1" text="Scalable Layouts" class="p-r-10"></Label>
                 </GridLayout>
-    
+
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/rlv-tips')" (tap)="onNavItemTap('/rlv-tips')">
+                    <Label col="0" text="&#xf550;" class="fa"></Label>
+                    <Label col="1" text="RLV Tips" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/optimizations')" (tap)="onNavItemTap('/optimizations')">
+                    <Label col="0" text="&#xf51a;" class="fa"></Label>
+                    <Label col="1" text="Optimizations" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/mem-leaks')" (tap)="onNavItemTap('/mem-leaks')">
+                    <Label col="0" text="&#xf1fb;" class="fa"></Label>
+                    <Label col="1" text="Memory Leaks" class="p-r-10"></Label>
+                </GridLayout>
+
                 <StackLayout class="hr-light"></StackLayout>
 
-                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
-                    <Label col="0" text="&#xf013;" class="fa"></Label>
-                    <Label col="1" text="Settings" class="p-r-10"></Label>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/design-to-ui')" (tap)="onNavItemTap('/design-to-ui')">
+                    <Label col="0" text="&#xf0d0;" class="fa"></Label>
+                    <Label col="1" text="Design to UI" class="p-r-10"></Label>
                 </GridLayout>
+
             </StackLayout>
         </ScrollView>
     </GridLayout>
