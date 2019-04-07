@@ -3,7 +3,7 @@ import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/overview", pathMatch: "full" },
+    { path: "", redirectTo: "/widgets-refresher", pathMatch: "full" },
     { path: "overview", loadChildren: "~/app/overview/overview.module#OverviewModule" },
     { path: "layouts-refresher", loadChildren: "~/app/layouts-refresher/layouts-refresher.module#LayoutsRefresherModule" },
     { path: "widgets-refresher", loadChildren: "~/app/widgets-refresher/widgets-refresher.module#WidgetsRefresherModule" },

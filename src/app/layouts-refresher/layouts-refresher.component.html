@@ -6,7 +6,16 @@
     <Label class="action-bar-title" text="Layouts Refresher"></Label>
 </ActionBar>
 
-<GridLayout class="page page-content">
-    <Label class="page-icon fa" text="&#xf00b;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+<GridLayout class="page page-content list-group" rows="auto, auto, auto, auto, auto, auto">
+    <Label row="0" class="fa h3 list-group-item" (tap)="onLayoutTap($event)" text="&#xf138;  Stack Layout"></Label>
+    <Label row="1" class="fa h3 list-group-item" (tap)="onLayoutTap($event)" text="&#xf138;  Absolute Layout"></Label>
+    <Label row="2" class="fa h3 list-group-item" (tap)="onLayoutTap($event)" text="&#xf138;  Wrap Layout"></Label>
+    <Label row="3" class="fa h3 list-group-item" (tap)="onLayoutTap($event)" text="&#xf138;  Dock Layout"></Label>
+    <Label row="4" class="h3 list-group-item" (tap)="onLayoutTap($event)">
+        <FormattedString>
+            <Span class="fa" text="&#xf138;  "></Span>
+            <Span text="Flexbox Layout"></Span>
+        </FormattedString>
+    </Label>
+    <Label row="5" class="fa h3 list-group-item" (tap)="onLayoutTap($event)" text="&#xf138;  Grid Layout"></Label>
 </GridLayout>

@@ -6,7 +6,27 @@
     <Label class="action-bar-title" text="Widgets Refresher"></Label>
 </ActionBar>
 
-<GridLayout class="page page-content">
-    <Label class="page-icon fa" text="&#xf3a5;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+<GridLayout class="page page-content list-group" rows="auto, auto, auto, auto, auto, auto, auto">
+    <Label row="0" class="fa h3 list-group-item" (tap)="onWidgetTap($event)" text="&#xf138;  Labels"></Label>
+    <Label row="1" class="fa h3 list-group-item" (tap)="onWidgetTap($event)" text="&#xf138;  Buttons"></Label>
+    <Label row="2" class="fa h3 list-group-item" (tap)="onWidgetTap($event)" text="&#xf138;  Text Fields"></Label>
+    <Label row="3" class="h3 list-group-item" (tap)="onWidgetTap($event)">
+        <FormattedString>
+            <Span class="fa" text="&#xf138;  "></Span>
+            <Span text="Images"></Span>
+        </FormattedString>
+    </Label>
+    <Label row="4" class="h3 list-group-item" (tap)="onWidgetTap($event)">
+        <FormattedString>
+            <Span class="fa" text="&#xf138;  "></Span>
+            <Span text="Activity Indicators"></Span>
+        </FormattedString>
+    </Label>
+    <Label row="5" class="h3 list-group-item" (tap)="onWidgetTap($event)">
+        <FormattedString>
+            <Span class="fa" text="&#xf138;  "></Span>
+            <Span text="Progress Bars"></Span>
+        </FormattedString>
+    </Label>
+    <Label row="6" class="fa h3 list-group-item" (tap)="onWidgetTap($event)" text="&#xf138;  Web Views"></Label>
 </GridLayout>

@@ -38,7 +38,8 @@ export class AppComponent implements OnInit {
     onNavItemTap(navItemRoute: string): void {
         this.routerExtensions.navigate([navItemRoute], {
             transition: {
-                name: "fade"
+                name: "fade",
+                duration: 200
             }
         });
 
