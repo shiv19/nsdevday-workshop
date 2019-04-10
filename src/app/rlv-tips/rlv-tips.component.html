@@ -6,7 +6,40 @@
     <Label class="action-bar-title" text="RLV Tips"></Label>
 </ActionBar>
 
-<GridLayout class="page page-content">
-    <Label class="page-icon fa" text="&#xf550;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+<GridLayout class="page page-content list-group" rows="60, 1/2*, 40, 60, 1/2*">
+    <Label row="0" class="fa h3 list-group-item" text="&#xf138;  Always use Observable Array"></Label>
+    <RadListView #lv row="1" [items]="source">
+        <ng-template tkListItemTemplate let-item="item">
+          <StackLayout>
+            <Label (loaded)="onLoaded($event)" [text]="item?.title" class="list-group-item"></Label>
+          </StackLayout>
+        </ng-template>
+    </RadListView>
+    <FlexboxLayout row="2" justifyContent="space-between">
+        <Button text="Add Item" (tap)="onAddItem()"></Button>
+        <Button text="Replace Array" (tap)="replaceArray()"></Button>   
+        <Button text="Refresh List" (tap)="refreshList(lv)"></Button>   
+    </FlexboxLayout>
+    <Label row="3" class="h3 list-group-item">
+        <FormattedString>
+            <Span class="fa" text="&#xf138;  "></Span>
+            <Span text="How to load more items"></Span>
+        </FormattedString>
+    </Label>
+    <RadListView  row="4" [items]="bigSource"
+        (loadMoreDataRequested)="onLoadMoreItemsRequested($event)"
+        loadOnDemandMode="Auto">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout class="itemTemplateStackLayout" orientation="vertical">
+                <StackLayout class="innerOtemTemplateStackLayout" orientation="horizontal">
+                    <Image [src]="item.image" stretch="aspectFit" width="100"></Image>
+                    <StackLayout class="labelsStackLayout" orientation="vertical">
+                        <Label class="labelName" [text]="item.name"></Label>
+                        <Label class="labelTitle" [text]="item.title" textWrap="true"></Label>
+                        <Label class="labelText" text="{{item.text}} + {{item.text}} + {{item.text}}" textWrap="true"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
 </GridLayout>

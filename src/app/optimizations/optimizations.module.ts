@@ -3,11 +3,13 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 
 import { OptimizationsRoutingModule } from "./optimizations-routing.module";
 import { OptimizationsComponent } from "./optimizations.component";
+import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular/listview-directives";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        OptimizationsRoutingModule
+        OptimizationsRoutingModule,
+        NativeScriptUIListViewModule
     ],
     declarations: [
         OptimizationsComponent

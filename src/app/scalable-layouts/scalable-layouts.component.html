@@ -6,7 +6,27 @@
     <Label class="action-bar-title" text="Scalable Layouts"></Label>
 </ActionBar>
 
-<GridLayout class="page page-content">
-    <Label class="page-icon fa" text="&#xf31e;"></Label>
-    <Label class="page-placeholder" text="<!-- Page content goes here -->"></Label>
+<!-- <GridLayout rows="1*, 2*, 3*, 4*, 5*, 6*, 7*">
+    <Label row="0" backgroundColor="violet"></Label>
+    <Label row="1" backgroundColor="indigo"></Label>
+    <Label row="2" backgroundColor="blue"></Label>
+    <Label row="3" backgroundColor="green"></Label>
+    <Label row="4" backgroundColor="yellow"></Label>
+    <Label row="5" backgroundColor="orange"></Label>
+    <Label row="6" backgroundColor="red"></Label>
+</GridLayout> -->
+
+<!-- <FlexboxLayout flexDirection="column">
+    <Label flexGrow="0" backgroundColor="violet"></Label>
+    <Label flexGrow="1" backgroundColor="indigo"></Label>
+    <Label flexGrow="2" backgroundColor="blue"></Label>
+    <Label flexGrow="3" backgroundColor="green"></Label>
+    <Label flexGrow="4" backgroundColor="yellow"></Label>
+    <Label flexGrow="5" backgroundColor="orange"></Label>
+    <Label flexGrow="6" backgroundColor="red"></Label>
+</FlexboxLayout> -->
+
+<GridLayout rows="1/12*, 1/12*, 1/12*, 1/12*, 1/12*, 1/12*, 1/12*,  1/12*, 1/12*, 1/12*, 1/12*, 1/12*"
+    columns="1/8*, 1/8*, 1/8*, 1/8*, 1/8*, 1/8*, 1/8*, 1/8*">
+    <Label col="0" colSpan="8" class="h1" text="Grid System"></Label>
 </GridLayout>
