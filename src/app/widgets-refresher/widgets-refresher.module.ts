@@ -8,7 +8,7 @@ import { ButtonsComponent } from "./buttons/buttons.component";
 import { ImagesComponent } from "./images/images.component";
 import { TextFieldsComponent } from "./text-fields/text-fields.component";
 import { ActivityIndicatorsComponent } from "./activity-indicators/activity-indicators.component";
-import { ProgressBarsComponent } from "./progress-bars/progress-bars.component";
+import { ProgressBarsAndSlidersComponent } from "./progress-bars-and-sliders/progress-bars-and-sliders.component";
 import { WebViewsComponent } from "./web-views/web-views.component";
 
 @NgModule({
@@ -23,7 +23,7 @@ import { WebViewsComponent } from "./web-views/web-views.component";
         TextFieldsComponent,
         ImagesComponent,
         ActivityIndicatorsComponent,
-        ProgressBarsComponent,
+        ProgressBarsAndSlidersComponent,
         WebViewsComponent
     ],
     schemas: [

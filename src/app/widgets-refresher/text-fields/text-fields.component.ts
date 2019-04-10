@@ -10,6 +10,7 @@ import { BaseComponent } from '~/app/shared/base.component';
 
 export class TextFieldsComponent extends BaseComponent implements OnInit {
 
+	password;
 	constructor() {
 		super();
 	}

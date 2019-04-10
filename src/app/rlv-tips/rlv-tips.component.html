@@ -6,7 +6,7 @@
     <Label class="action-bar-title" text="RLV Tips"></Label>
 </ActionBar>
 
-<GridLayout class="page page-content list-group" rows="60, 1/2*, 40, 60, 1/2*">
+<GridLayout class="page list-group" rows="60, 1/2*, 40, 60, 1/2*">
     <Label row="0" class="fa h3 list-group-item" text="&#xf138;  Always use Observable Array"></Label>
     <RadListView #lv row="1" [items]="source">
         <ng-template tkListItemTemplate let-item="item">

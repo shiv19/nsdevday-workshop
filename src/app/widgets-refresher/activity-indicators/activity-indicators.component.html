@@ -3,6 +3,18 @@
     <Label class="action-bar-title" text="Activity Indicators"></Label>
 </ActionBar>
 
-<StackLayout class="page page-content">
-  <Label class="h2 p-10" text="Hello ActivityIndicatorsComponent!"></Label>
+<StackLayout class="page">
+  <ActivityIndicator width="100" height="100" busy="true"></ActivityIndicator>
+  <ActivityIndicator width="80" height="80" busy="true"></ActivityIndicator>
+  <StackLayout (loaded)="onStackOuterLoaded($event)">
+    <ActivityIndicator width="60" height="60" busy="true"></ActivityIndicator>
+    <StackLayout (loaded)="onStackLoaded($event)">
+      <ActivityIndicator width="40" height="40" busy="true"></ActivityIndicator>
+      <ActivityIndicator width="20" height="20" busy="true"></ActivityIndicator>
+      <ActivityIndicator width="40" height="40" busy="true"></ActivityIndicator>
+    </StackLayout>
+    <ActivityIndicator width="60" height="60" busy="true"></ActivityIndicator>
+  </StackLayout>
+  <ActivityIndicator width="80" height="80" busy="true"></ActivityIndicator> 
+  <ActivityIndicator width="100" height="100" busy="true"></ActivityIndicator>
 </StackLayout>

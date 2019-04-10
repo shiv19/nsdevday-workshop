@@ -1,0 +1,20 @@
+<ActionBar class="action-bar">
+    <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_back" (tap)="onGoBack()"></NavigationButton>
+    <Label class="action-bar-title" text="Progress Bars"></Label>
+</ActionBar>
+
+<StackLayout class="page p-20">
+  <Progress [value]="0" class="progress"></Progress>
+  <Progress [value]="20" class="progress"></Progress>
+  <Progress [value]="40" class="progress"></Progress>
+  <Progress [value]="60" class="progress"></Progress>
+  <Progress [value]="80" class="progress"></Progress>
+  <Progress [value]="100" class="progress"></Progress>
+  <Slider [value]="0" class="slider"></Slider>
+  <Slider [value]="20" class="slider"></Slider>
+  <Slider [value]="40" class="slider"></Slider>
+  <Slider [value]="60" class="slider"></Slider>
+  <Slider [value]="80" class="slider"></Slider>
+  <Slider [value]="100" class="slider"></Slider>
+  
+</StackLayout>

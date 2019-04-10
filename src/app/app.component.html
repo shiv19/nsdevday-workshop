@@ -6,15 +6,15 @@
                     <Label col="0" text="&#xf015;" class="fa"></Label>
                     <Label col="1" text="Overview" class="p-r-10"></Label>
                 </GridLayout>
+                
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/widgets-refresher')" (tap)="onNavItemTap('/widgets-refresher')">
+                    <Label col="0" text="&#xf3a5;" class="fa"></Label>
+                    <Label col="1" text="Widgets Refresher" class="p-r-10"></Label>
+                </GridLayout>
 
                 <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/layouts-refresher')" (tap)="onNavItemTap('/layouts-refresher')">
                     <Label col="0" text="&#xf00b;" class="fa"></Label>
                     <Label col="1" text="Layouts Refresher" class="p-r-10"></Label>
-                </GridLayout>
-
-                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/widgets-refresher')" (tap)="onNavItemTap('/widgets-refresher')">
-                    <Label col="0" text="&#xf3a5;" class="fa"></Label>
-                    <Label col="1" text="Widgets Refresher" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/scalable-layouts')" (tap)="onNavItemTap('/scalable-layouts')">
@@ -48,5 +48,5 @@
         </ScrollView>
     </GridLayout>
 
-    <page-router-outlet tkMainContent class="page page-content"></page-router-outlet>
+    <page-router-outlet tkMainContent class="page"></page-router-outlet>
 </RadSideDrawer>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseComponent } from '~/app/shared/base.component';
+import { touchPop } from '~/app/shared/uiux-helper';
 
 @Component({
 	moduleId: module.id,
@@ -10,9 +11,18 @@ import { BaseComponent } from '~/app/shared/base.component';
 
 export class ButtonsComponent extends BaseComponent implements OnInit {
 
+	isLoading = false;
 	constructor() {
 		super();
 	}
 
-	ngOnInit() { }
+	ngOnInit() {
+	}
+
+	onTap() {
+		this.isLoading = true;
+		setTimeout(() => {
+			this.isLoading = false;
+		}, 1000);
+	}
 }
