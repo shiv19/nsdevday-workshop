@@ -3,6 +3,44 @@
     <Label class="action-bar-title" text="Challenge 1 - Profile"></Label>
 </ActionBar>
 
-<GridLayout class="page">
-
+<GridLayout class="page" rows="1/2*, 1/2*">
+    <Image row="0" rowSpan="2" src="~/imgs/abstractpolygon.jpg" verticalAlignment="top" stretch="aspectFill"></Image>
+    <Label row="0" rowSpan="2" backgroundColor="#27304F" opacity="0.8"></Label>
+    <GridLayout row="0" rows="8/10*, 2/10*" columns="1/3*,1/3*,1/3*" class="top">
+        <StackLayout row="0" col="0" colSpan="3" class="m-t-30 m-b-30" borderRadius="100%" borderWidth="3" borderColor="white" horizontalAlignment="center" verticalAlignment="bottom">
+            <Image borderRadius="100%" width="150" src="~/imgs/profile-pic.jpg"></Image>
+        </StackLayout>
+        <Label row="1" col="0" class="c-white text-center tw t-18" text="7&#xa;Goals"></Label>
+        <Label row="1" col="1" class="c-white text-center tw t-18" text="25&#xa;Followings"></Label>
+        <Label row="1" col="2" class="c-white text-center tw t-18" text="573&#xa;Followers"></Label>
+    </GridLayout>
+    <GridLayout row="1" class="bottom" rows="1/2*, 1/2*" columns="1/2*, 1/2*">
+        <Label class="card text-center t-20 c-white tw" paddingTop="60%" row="0" col="0" backgroundColor="#86C6E4">
+            <FormattedString>
+                <Span text="Add Goal&#xa;&#xa;"></Span>
+                <Span class="fa" fontSize="30" text="plus-circle"></Span>
+            </FormattedString>
+        </Label>
+        <Label class="card text-center t-20 c-white tw" paddingTop="60%" row="0" col="1" backgroundColor="#E4B370">
+            <FormattedString>
+                <Span text="In Progress&#xa;&#xa;"></Span>
+                <Span class="fa" fontSize="30" text="circle"></Span>
+            </FormattedString>
+        </Label>
+        <Label class="card text-center t-20 c-white tw" text="&#xa;&#xa;3" color="#E4B370" paddingTop="63%" row="0" col="1"></Label>
+        <Label class="card text-center t-20 c-white tw" paddingTop="60%" row="1" col="0" backgroundColor="#87E5B3">
+            <FormattedString>
+                <Span text="Achieved&#xa;&#xa;"></Span>
+                <Span class="fa" fontSize="30" text="circle"></Span>
+            </FormattedString>
+        </Label>
+        <Label class="card text-center t-16 c-white tw" text="&#xa;&#xa;288" color="#87E5B3" paddingTop="75%" row="1" col="0"></Label>
+        <Label class="card text-center t-20 c-white tw" paddingTop="60%" row="1" col="1" backgroundColor="#E78594">
+            <FormattedString>
+                <Span text="Not Achieved&#xa;&#xa;"></Span>
+                <Span class="fa" fontSize="30" text="circle"></Span>
+            </FormattedString>
+        </Label>
+        <Label class="card text-center t-20 c-white tw" text="&#xa;&#xa;8" color="#E78594" paddingTop="63%" row="1" col="1"></Label>
+    </GridLayout>
 </GridLayout>
