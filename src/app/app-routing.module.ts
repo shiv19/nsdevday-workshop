@@ -10,7 +10,6 @@ const routes: Routes = [
     { path: "scalable-layouts", loadChildren: "~/app/scalable-layouts/scalable-layouts.module#ScalableLayoutsModule" },
     { path: "rlv-tips", loadChildren: "~/app/rlv-tips/rlv-tips.module#RlvTipsModule" },
     { path: "optimizations", loadChildren: "~/app/optimizations/optimizations.module#OptimizationsModule" },
-    { path: "mem-leaks", loadChildren: "~/app/mem-leaks/mem-leaks.module#MemLeaksModule" },
     { path: "design-to-ui", loadChildren: "~/app/design-to-ui/design-to-ui.module#DesignToUIModule" },
 ];
 

@@ -4,6 +4,8 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { OptimizationsRoutingModule } from "./optimizations-routing.module";
 import { OptimizationsComponent } from "./optimizations.component";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular/listview-directives";
+import { CacheService } from "../services/cache.service";
+import { ImgCachePipe } from "../shared/imgCache.pipe";
 
 @NgModule({
     imports: [
@@ -12,7 +14,11 @@ import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular/l
         NativeScriptUIListViewModule
     ],
     declarations: [
-        OptimizationsComponent
+        OptimizationsComponent,
+        ImgCachePipe
+    ],
+    providers: [
+        CacheService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

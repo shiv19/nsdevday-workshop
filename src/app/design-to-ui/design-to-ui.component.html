@@ -6,6 +6,14 @@
     <Label class="action-bar-title" text="Design To UI"></Label>
 </ActionBar>
 
-<GridLayout class="page">
-    
-</GridLayout>
+<ScrollView>
+    <StackLayout class="page">
+        <Image class="m-20" [src]="'~/imgs/design-screen1.png' | imgCache | async"></Image>
+        <Label class="h2 text-center" text="Challenge 1 - Profile"></Label>
+        <Button class="btn btn-primary" text="Accept Challenge" (tap)="gotoChallenge('profile')"></Button>
+        <Label class="hr-light"></Label>
+        <Image class="m-20" [src]="'~/imgs/design-screen2.png' | imgCache | async"></Image>
+        <Label class="h2 text-center" text="Challenge 2 - List"></Label>
+        <Button class="btn btn-primary" text="Accept Challenge" (tap)="gotoChallenge('list')"></Button>
+    </StackLayout>
+</ScrollView>
