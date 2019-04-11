@@ -19,7 +19,7 @@ export class OptimizationsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        Array.from(Array(10).keys()).forEach(i => {
+        Array.from(Array(1000).keys()).forEach(i => {
             this.cards.push({
                 id: i,
                 title: `Title ${i+1}`,
@@ -41,5 +41,9 @@ export class OptimizationsComponent implements OnInit {
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.showDrawer();
+    }
+
+    onLoaded(args) {
+        console.log('stack loaded');
     }
 }

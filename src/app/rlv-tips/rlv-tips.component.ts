@@ -30,7 +30,7 @@ export class RlvTipsComponent implements OnInit {
             title: "Row 3"
         }
     ];
-    public source = [...this._origArray];
+    public source = new ObservableArray([...this._origArray]);
 
     public bigSource: ObservableArray<DataItem>;
     private _numberOfAddedItems;
@@ -56,33 +56,28 @@ export class RlvTipsComponent implements OnInit {
 
     replaceArray() {
         // Wrong
-        this.source = [...this.source];
+        // this.source = new ObservableArray([...(<any>this.source)._array]);
 
         // Wrong
-        //this.source = new ObservableArray(this.source.map(i => i));
+        // this.source = new ObservableArray(this.source.map(i => i));
         // this._origArray.push({
         //     title: 'Row 4'
         // })
 
         // Right
-        // const newArray = [...this._origArray];
-        // const newArray = [
-        //     {
-        //         title: "Row 1"
-        //     },
-        //     {
-        //         title: "Row 2"
-        //     }
-        // ];
-        // for (let i = 0; i < newArray.length; i++) {
-        //     const item = this.source.getItem(i);
-        //     if (item) {
-        //         this.source.setItem(i, newArray[i]);
-        //     } else {
-        //         this.source.push(newArray[i]);
-        //     }
-        // }
-        // this.source.length = newArray.length;
+        const newArray = [...this._origArray];
+        newArray.push({
+            title: "Row 4"
+        })
+        for (let i = 0; i < newArray.length; i++) {
+            const item = this.source.getItem(i);
+            if (item) {
+                this.source.setItem(i, newArray[i]);
+            } else {
+                this.source.push(newArray[i]);
+            }
+        }
+        this.source.length = newArray.length;
     }
 
     refreshList(lv) {

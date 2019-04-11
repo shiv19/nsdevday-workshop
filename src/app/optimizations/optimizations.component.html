@@ -7,13 +7,13 @@
 </ActionBar>
 
 <ScrollView>
-    <StackLayout>
-        <FlexboxLayout class="p-10" justifyContent="space-between" alignItems="center">
-            <!-- (tap)="section1Arrow.text = section1Arrow.text === 'chevron-right' ? 'chevron-down' : 'chevron-right'"> -->
-            <Label class="h2 p-b-10" text="Section 1" flexGrow="1" borderBottomWidth="1" borderColor="#eee"></Label>
-            <Label #section1Arrow class="h2 fa p-b-10" text="chevron-right"></Label>
-        </FlexboxLayout>
-        <!-- <RadListView [items]="cards">
+    <GridLayout rows="auto, *, auto" columns="*, auto">
+        <!-- <FlexboxLayout class="p-10" justifyContent="space-between" alignItems="center"> -->
+            <Label row="0" col="0" (tap)="section1Arrow.text = section1Arrow.text === 'chevron-right' ? 'chevron-down' : 'chevron-right'"
+                class="h2 p-b-10" text="Section 1" flexGrow="1" borderBottomWidth="1" borderColor="#eee"></Label>
+            <Label row="0" col="1" #section1Arrow class="h2 fa p-b-10" text="chevron-right"></Label>
+        <!-- </FlexboxLayout> -->
+        <RadListView row="1" col="0" colSpan="2" [items]="cards" [visibility]="section1Arrow.text === 'chevron-down' ? 'visible' : 'collapse'">
             <ListViewLinearLayout tkListViewLayout scrollDirection="Horizontal"></ListViewLinearLayout>
             <ng-template tkListItemTemplate let-card="item">
                 <StackLayout class="p-10 card" width="200">
@@ -25,9 +25,9 @@
                     </FlexboxLayout>
                 </StackLayout>
             </ng-template>
-        </RadListView> -->
-        <ScrollView orientation="horizontal"><!-- *ngIf="section1Arrow.text === 'chevron-down'"> -->
-            <StackLayout orientation="horizontal">
+        </RadListView>
+        <!-- <ScrollView orientation="horizontal" [visibility]="section1Arrow.text === 'chevron-down' ? 'visible' : 'collapse'">
+            <StackLayout orientation="horizontal" (loaded)="onLoaded($event)">
                 <StackLayout class="p-10 card" width="200" *ngFor="let card of cards">
                     <Label class="t-20 text-bold" [text]="card.title"></Label>
                     <Label class="t-18" [text]="card.description" textWrap="true"></Label>
@@ -37,41 +37,8 @@
                     </FlexboxLayout>
                 </StackLayout>
             </StackLayout>
-        </ScrollView>
-        <FlexboxLayout class="p-10" justifyContent="space-between" alignItems="center">
-            <!-- (tap)="section2Arrow.text = section2Arrow.text === 'chevron-right' ? 'chevron-down' : 'chevron-right'"> -->
-            <Label class="h2 p-b-10" text="Section 2" flexGrow="1" borderBottomWidth="1" borderColor="#eee"></Label>
-            <Label #section2Arrow class="h2 fa p-b-10" text="chevron-right"></Label>
-        </FlexboxLayout>
-        <ScrollView orientation="horizontal"><!-- *ngIf="section2Arrow.text === 'chevron-down'"> -->
-            <StackLayout orientation="horizontal">
-                <StackLayout class="p-10 card" width="200" *ngFor="let card of cards2">
-                    <Label class="t-20 text-bold" [text]="card.title"></Label>
-                    <Label class="t-18" [text]="card.description" textWrap="true"></Label>
-                    <FlexboxLayout justifyContent="space-between" alignItems="center">
-                        <Label class="h3 p-b-10" text="Action 1"></Label>
-                        <Label class="h3 p-b-10" text="Action 2"></Label>
-                    </FlexboxLayout>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
-        <FlexboxLayout class="p-10" justifyContent="space-between" alignItems="center">
-            <!-- (tap)="section3Arrow.text = section3Arrow.text === 'chevron-right' ? 'chevron-down' : 'chevron-right'"> -->
-            <Label class="h2 p-b-10" text="Section 3" flexGrow="1" borderBottomWidth="1" borderColor="#eee"></Label>
-            <Label #section3Arrow class="h2 fa p-b-10" text="chevron-right"></Label>
-        </FlexboxLayout>
-        <ScrollView orientation="horizontal"><!-- *ngIf="section3Arrow.text === 'chevron-down'"> -->
-            <StackLayout orientation="horizontal">
-                <StackLayout class="p-10 card" width="200" *ngFor="let card of cards3">
-                    <Label class="t-20 text-bold" [text]="card.title"></Label>
-                    <Label class="t-18" [text]="card.description" textWrap="true"></Label>
-                    <FlexboxLayout justifyContent="space-between" alignItems="center">
-                        <Label class="h3 p-b-10" text="Action 1"></Label>
-                        <Label class="h3 p-b-10" text="Action 2"></Label>
-                    </FlexboxLayout>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
-        <Image [src]="'https://images.unsplash.com/photo-1554755209-85e44182e019' | imgCache | async"></Image>
-    </StackLayout>
+        </ScrollView> -->
+        
+        <Image row="2" [src]="'https://images.unsplash.com/photo-1554755209-85e44182e019' | imgCache | async"></Image>
+    </GridLayout>
 </ScrollView>

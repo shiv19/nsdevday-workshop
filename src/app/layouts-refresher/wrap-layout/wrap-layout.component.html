@@ -2,13 +2,28 @@
     <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_back" (tap)="onGoBack()"></NavigationButton>
     <Label class="action-bar-title" text="Wrap Layout"></Label>
 </ActionBar>
-
-<WrapLayout class="page">
+<ScrollView orientation="horizontal">
+<WrapLayout class="page" orientation="vertical">
   <Label class="h2 p-10" text="Hello WrapLayoutComponent!"></Label>
-  <Label class="h2 p-10" text="Item 1"></Label>
-  <Label class="h2 p-10" text="Item 2"></Label>
-  <Label class="h2 p-10" text="Item 3"></Label>
-  <Label class="h2 p-10" text="Item 4"></Label>
-  <Label class="h2 p-10" text="Item 5"></Label>
-  <Label class="h2 p-10" text="Item 6"></Label>
+  <Label class="h2 p-10" backgroundColor="blue" text="Item 1"></Label>
+  <Label class="h2 p-10" backgroundColor="green" text="Item 2"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 3"></Label>
+  <Label class="h2 p-10" backgroundColor="blue" text="Item 4"></Label>
+  <Label class="h2 p-10" backgroundColor="green" text="Item 5"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 6"></Label>
+  <Label class="h2 p-10" backgroundColor="blue" text="Item 1"></Label>
+  <Label class="h2 p-10" backgroundColor="green" text="Item 2"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 3"></Label>
+  <Label class="h2 p-10" backgroundColor="blue" text="Item 4"></Label>
+  <Label class="h2 p-10" backgroundColor="green" text="Item 5"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 6"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 6"></Label>
+  <Label class="h2 p-10" text="Hello WrapLayoutComponent!"></Label>
+  <Label class="h2 p-10" backgroundColor="blue" text="Item 1"></Label>
+  <Label class="h2 p-10" backgroundColor="green" text="Item 2"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 3"></Label>
+  <Label class="h2 p-10" backgroundColor="blue" text="Item 4"></Label>
+  <Label class="h2 p-10" backgroundColor="green" text="Item 5"></Label>
+  <Label class="h2 p-10" backgroundColor="red" text="Item 6"></Label>
 </WrapLayout>
+</ScrollView>

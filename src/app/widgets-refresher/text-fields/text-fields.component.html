@@ -3,11 +3,11 @@
     <Label class="action-bar-title" text="Text Fields"></Label>
 </ActionBar>
 
-<StackLayout class="page p-20">
-  <TextField hint="First Name" text=""></TextField>
-  <TextField hint="Last Name" text=""></TextField>
+<StackLayout class="page p-20 form">
+  <TextField class="input input-border" hint="First Name" text=""></TextField>
+  <TextField class="input input-rounded" hint="Last Name" text=""></TextField>
   <TextField hint="Email" text=""></TextField>
-  <TextField hint="Password" text=""></TextField>
+  <TextField secure="true" hint="Password" text=""></TextField>
   <TextField hint="Confirm Password" text=""></TextField>
   <StackLayout>
     <Label text="Hobbies"></Label>
@@ -17,5 +17,5 @@
     <Label text="Skills"></Label>
     <TextField text=""></TextField>
   </StackLayout>
-  <TextView hint="Bio" text=""></TextView>
+  <TextView class="input input-border" minHeight="120" hint="Bio" text=""></TextView>
 </StackLayout>
