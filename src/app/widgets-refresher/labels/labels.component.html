@@ -1,11 +1,21 @@
 <ActionBar class="action-bar">
     <NavigationButton ios:visibility="collapsed" android.systemIcon="ic_menu_back" (tap)="onGoBack()"></NavigationButton>
+    <ActionItem android:visibility="collapsed" (tap)="onGoBack()">
+      <ActionView>
+        <Label text="<-"></Label>
+      </ActionView>
+    </ActionItem>
     <Label class="action-bar-title" text="Labels"></Label>
 </ActionBar>
 
-<StackLayout class="page">
-  <Label text="⌚️"></Label>
-  <Label text="Aviator World Time Pilot Watch"></Label>
-  <Label class="fa" text="Product Features chevron-right"></Label>
-  <Label text="Features an integrated calendar, luminous hands and gold-plated stainless steel case."></Label>
+<StackLayout class="page p-20" style="font-size: 30">
+  <Label class="text-center" fontSize="100" text="⌚️"></Label>
+  <Label class="h2 tw" text="Aviator World Time Pilot Watch"></Label>
+  <Label class="t-18">
+    <FormattedString>
+      <Span text="Product Features "></Span>
+      <Span class="fa" text="chevron-right"></Span>
+    </FormattedString>
+  </Label>
+  <Label class="t-16 tw p-10" text="Features an integrated calendar, luminous hands and gold-plated stainless steel case." backgroundColor="lightblue"></Label>
 </StackLayout>

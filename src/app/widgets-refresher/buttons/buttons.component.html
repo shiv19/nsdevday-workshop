@@ -5,13 +5,24 @@
 
 <StackLayout class="page">
   <!-- Regular Buttons -->
-  <Button text="Login"></Button>
-  <Button text="Register"></Button>
-  <Button class="fa" text="plus Add to Cart"></Button>
-  <Button text="Buy Now"></Button>
+  <Button class="btn btn-primary" text="Login"></Button>
+  <Button id="register" class="btn btn-outline" text="Register"></Button>
+  <Button class="btn btn-primary">
+    <FormattedString>
+      <Span class="fa" text="plus "></Span>
+      <Span text="Add to Cart"></Span>
+    </FormattedString>
+  </Button>
+  <Button text="Buy Now" (tap)="onBtnTap($event)"></Button>
   <Button text="Proceed to Checkout"></Button>
 
   <!-- Progress Buttons -->
+  <Button class="btn btn-primary" text="Downloading"
+    background="{{ 'linear-gradient(to right, green '+downloadProgress+'%, lightgray)' }}"></Button>
   
   <!-- Async Buttons -->
+  <GridLayout rows="auto">
+    <Button style.zIndex="0" row="0" text="Get Articles" (tap)="onTap($event)"></Button>
+    <ActivityIndicator class="pull-right" style.zIndex="1" height="20" row="0" [busy]="isLoading"></ActivityIndicator>
+  </GridLayout>
 </StackLayout>
